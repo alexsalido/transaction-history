@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				<img width="50" height="50" alt="Brand" src="/media/logo.png">
+			</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/{+href/}">{+link/}</a></li>
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+		<p class="navbar-text">Logged in as {+user/}</p>
+	</div>
+</nav>

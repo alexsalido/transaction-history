@@ -1,0 +1,103 @@
+{>"layouts/master" /}
+
+{<title}
+	Dashboard
+{/title}
+
+{<link}
+	Exchange Rates
+{/link}
+
+{<href}
+	rates
+{/href}
+
+{<user}
+	{user.name}
+{/user}
+
+{<body}
+	{>"layouts/navbar" /}
+	<div id="transactions">
+		<div>
+			<h2>Transactions History</h2>
+			<table class="table table-striped table-hover table-fixedheader">
+				<thead>
+					<tr class="info">
+						<th>Date</th>
+						<th>Transaction</th>
+						<th>
+							<select id="currency" name="select">
+								<option>USD</option>
+								<option>EUR</option>
+								<option>CAD</option>
+								<option>MXN</option>
+								<option>CNY</option>
+								<option>INR</option>
+							</select>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+					{>"layouts/table" /}
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<form method="post" action="/dashboard/transaction">
+				<input type="hidden" name="_csrf" value="{_csrf}">
+				<div class="form-group">
+					<label for="transactionDate">Date</label>
+					<input type="date" class="form-control" id="transactionDate" name="date" placeholder="Date" required>
+				</div>
+				<div class="form-group">
+					<label>Type</label>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<select name="type" class="selectpicker">
+								<option>Purchase</option>
+								<option>Refund</option>
+								<option>Transfer</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="transactionBusiness">Business</label>
+					<input type="text" class="form-control" id="transactionBusiness" name="business" placeholder="Business" required>
+				</div>
+				<div class="form-group">
+					<label for="transactionAmount">Amount</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="transactionAmount" name="amount" placeholder="Amount" required>
+						<div class="input-group-btn">
+							<select name="currency" class="selectpicker">
+								<option value="USD">USD</option>
+								<option value="EUR">EUR</option>
+								<option value="CAD">CAD</option>
+								<option value="MXN">MXN</option>
+								<option value="CNY">CNY</option>
+								<option value="INR">INR</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default">Add</button>
+			</form>
+		</div>
+		<span class="error">{error}</span>
+	</div>
+	<script src="/components/jquery/dist/jquery.min.js"></script>
+	<script src="/components/dustjs-linkedin/dist/dust-full.min.js"></script>
+	<script type="text/javascript" src="/templates/layouts/table.js"></script>
+	<script>
+		$(currency).change(function() {
+			var currency = $(this).val();
+			$.get('/dashboard/transactions?currency=' + currency, function (data, status) {
+				dust.render('layouts/table', data, function (tmp, html) {
+					$(tbody).html(html);
+				});
+			});
+		});
+	</script>
+{/body}

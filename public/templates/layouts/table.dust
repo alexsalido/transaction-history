@@ -1,0 +1,7 @@
+{#transactions}
+<tr>
+	<td>{date}</td>
+	<td>{type}: {business}</td>
+	<td>{amount[0].symbol}{amount[0].value}</td>
+</tr>
+{/transactions}
