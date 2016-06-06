@@ -1,0 +1,42 @@
+{
+  "name": "currency-conversion",
+  "version": "0.1.0",
+  "description": "Real time currency conversion",
+  "author": "Alejandro Salido",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test"
+  },
+  "dependencies": {
+    "adaro": "^0.1.10",
+    "composable-middleware": "^0.3.0",
+    "connect-mongodb-session": "^1.1.1",
+    "construx": "^1.0.0",
+    "construx-copier": "^1.0.0",
+    "construx-dustjs-i18n": "^1.0.1",
+    "dustjs-helpers": "~1.6.3",
+    "dustjs-linkedin": "~2.6.2",
+    "engine-munger": "^0.2.9",
+    "eslint": "^1.10.3",
+    "express": "^4.12.2",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "^6.2.0",
+    "kraken-js": "^1.0.3",
+    "mongoose": "^4.4.17",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-copy-to": "0.0.10",
+    "grunt-dustjs": "^1.4.0",
+    "grunt-eslint": "^17.3.2",
+    "grunt-mocha-cli": "^1.14.0",
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  }
+}

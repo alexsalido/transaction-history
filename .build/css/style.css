@@ -1,0 +1,159 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 1em;
+    background: linear-gradient(to right, #D39D38, #4DA0B0);
+}
+
+#wrapper {
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+#wrapper .navbar {
+    margin-bottom: 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#wrapper .navbar-brand {
+    padding: 0;
+    margin-left: -10px;
+}
+
+
+/* Landing */
+
+#landing {
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#landing h1 {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#signup {
+    display: inline-block;
+    width: 50%;
+    padding: 1em;
+}
+
+#login {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+    vertical-align: top;
+}
+
+
+/*Transactions*/
+
+#transactions {
+    display: flex;
+    height: 100%;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 4px 4px;
+}
+
+#transactions > div {
+    height: 100%;
+    width: 50%;
+    padding: 1em;
+}
+
+#transactions h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+
+/*Table*/
+
+#transactions .table {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+#transactions .table thead {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+#transactions .table tbody {
+    height: 80%;
+    background: white;
+    border-radius: 4px;
+}
+
+#transactions .table th {
+    padding-right: 20px;
+}
+
+#transactions .table th:first-child,
+#transactions .table td:first-child {
+    width: 20%;
+}
+
+#transactions .table th:nth-child(2),
+#transactions .table td:nth-child(2) {
+    width: 65%;
+}
+
+#transactions .table th:last-child,
+#transactions .table td:last-child {
+    width: 15%;
+    text-align: right;
+}
+
+
+/*Form*/
+
+#transactions form {
+    padding: 1em;
+    display: inline-block;
+    width: 50%;
+}
+
+/*Rates*/
+
+#rates {
+	height: 100%;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 4px 4px;
+}
+
+/*Bootstrap-select override*/
+
+div.bootstrap-select {
+    width: auto !important;
+}
+
+div.bootstrap-select button {
+    border-radius: 4px !important;
+}
+
+/*Error*/
+.error {
+	margin: 1em;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
