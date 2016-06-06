@@ -53,6 +53,6 @@
 
 	"databaseConfig": {
         "host": "localhost",
-        "database": "currencyConversion"
+        "database": "transactionsHistory"
     }
 }

@@ -1,4 +1,6 @@
-Currency Conversion
+Transactions History
 ===========
 
-Real time currency conversion
+Transactions history app with real time currency conversions.
+
+npm start

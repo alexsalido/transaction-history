@@ -28,7 +28,7 @@ app = module.exports = express();
 app.use(kraken(options));
 
 app.use(session({
-    secret: 'currencyConversion',
+    secret: 'transactionHistory',
     resave: false,
     saveUninitialized: true
 }));

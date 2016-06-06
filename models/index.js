@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = function IndexModel() {
-	return {
-		name: 'index',
-		title: 'Currency Conversion',
-		app: 'Currency Conversion'
-	};
+    return {
+        name: 'index',
+        title: 'Transactions History',
+        app: 'Transactions History'
+    };
 };

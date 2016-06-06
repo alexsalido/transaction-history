@@ -1,6 +1,6 @@
 {
-  "name": "currency-conversion",
-  "description": "Real time currency conversion",
+  "name": "transaction-history",
+  "description": "Transactions history app with real time currency conversion.",
   "main": "index.js",
   "author": "Alejandro Salido",
   "moduleType": [
